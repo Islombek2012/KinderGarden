@@ -39,7 +39,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-      background: #333;
+      background: lime;
 }
 
 .hidden {
@@ -52,23 +52,64 @@ a {
       padding: 0 10px;
 }
 
+
 .base-btn {
-      padding: 12px 24px;
-      border-radius: 30px;
-      border: 1px solid #ef664d;
-      background-color: #000;
-      color: #ef664d;
-      font-size: 13px;
       text-decoration: none;
-      transition: background-color .3s ease-out,color .4s ease-out, transform 0.5s;
-}
-.base-btn:hover{
-      background-color: #ef664d;
-      border: 1px solid #2525;
+      border-radius: 30px;
+      display: inline-block;
+      padding: 12px 24px;
+      background: rgb(164, 249, 36);
       color: #fff;
-      cursor: pointer;
-      transform: translate3D(0, -4px, 0);
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 500;
+      position: relative;
+      border: 1px solid greenyellow;
+      z-index: 1;
+      overflow: hidden;
+      transition: all .3s ease-in;
 }
+
+.base-btn span {
+      position: absolute;
+      width: 25%;
+      height: 100%;
+      background-color: #fff;
+      transform: translateY(150%);
+      border-radius: 50%;
+      left: calc((var(--n) - 1) * 25%);
+      transition: .5s;
+      transition-delay: calc((var(--n) - 1) * .1s);
+      z-index: -1;
+}
+
+.base-btn span:nth-child(1) {
+      --n: 1;
+}
+
+.base-btn span:nth-child(2) {
+      --n: 2;
+}
+
+.base-btn span:nth-child(3) {
+      --n: 3;
+}
+
+.base-btn span:nth-child(4) {
+      --n: 4;
+}
+
+.base-btn:hover {
+      color: rgb(88, 88, 241);
+      cursor: pointer;
+}
+
+.base-btn:hover span {
+      transform: translateY(0) scale(3);
+
+}
+
+/* sdfsdfsdf */
 .to-Top-Btn {
       transform: rotate(180deg);
       position: fixed;
@@ -79,14 +120,16 @@ a {
       display: grid;
       place-items: center;
       z-index: 6000;
-      background: #ef664d;
+      background: lime;
       border-radius: 50%;
-      border-color: #c27466;
+      border-color: lime;
       transition: all 0.5s ease;
       box-shadow: 0 0 4px #fff;
       cursor: pointer;
 }
-
+.to-Top-Btn:hover{
+      background: rgb(244, 224, 187);
+}
 .to-Top-Btn.active {
       bottom: 100px;
 }
@@ -100,7 +143,7 @@ a {
       width: 100%;
       padding: 25px 0 12px;
       box-shadow: 0 0 10px 4px #e1e1e1;
-      background-color: #fff;
+      background-color: rgb(46, 250, 46);
 }
 
 .nav__content {
@@ -181,7 +224,8 @@ a {
 .nav__lang-options .lang-option-item:hover {
       background: rgb(224, 224, 224);
 }
-.lang-img{
+
+.lang-img {
       width: 30px;
       height: 15px;
 }
@@ -239,13 +283,13 @@ a {
 .nav__list a,
 .resNAv__list a {
       font-size: 16px;
-      color: #252525;
+      color: rgb(88, 88, 241);
       transition: 0.3s;
       transition: color .8s ease, background-color .7s ease-in-out;
 }
 
 .nav__list a:hover {
-      color: #ef664d;
+      color: rgb(255, 255, 255);
 }
 
 .resNAv {
@@ -327,6 +371,7 @@ a {
 }
 
 .direction__title {
+      color: lime;
       text-align: center;
       font-weight: 600;
       font-size: clamp(1rem, 3vw, 48px);
@@ -339,14 +384,14 @@ a {
       font-size: clamp(1rem, 3vw, 21px);
       line-height: 29px;
       margin-bottom: 100px;
-      color: #ef664d;
+      color: lime;
 }
 
 .direction__desc span {
       font-size: clamp(1rem, 3vw, 21px);
       font-weight: 700;
       line-height: 29px;
-      color: #ef664d;
+      color: lime;
 }
 
 .direction__info {
@@ -367,6 +412,7 @@ a {
       align-items: center;
       position: absolute;
       gap: 25px;
+      color: lime;
       font-weight: 500;
       font-size: clamp(1rem, 1vw, 21px);
       line-height: 29px;
@@ -379,7 +425,7 @@ a {
       width: 25px;
       height: 25px;
       border-radius: 50%;
-      background-color: #e9c2c5;
+      background-color: lime;
 }
 
 .left-div-2 {
@@ -389,6 +435,7 @@ a {
       align-items: center;
       text-align: center;
       font-weight: 500;
+      color: lime;
       font-size: clamp(1rem, 1vw, 21px);
       line-height: 29px;
       left: 100px;
@@ -401,6 +448,7 @@ a {
       text-align: center;
       flex-direction: column;
       align-items: center;
+      color: lime;
       font-weight: 500;
       font-size: clamp(1rem, 1vw, 21px);
       line-height: 29px;
@@ -412,7 +460,7 @@ a {
       width: 25px;
       height: 25px;
       border-radius: 50%;
-      background-color: #e9c2c5;
+      background-color: lime;
 }
 
 .right-div-1 {
@@ -421,6 +469,7 @@ a {
       flex-direction: column;
       align-items: center;
       gap: 25px;
+      color: lime;
       text-align: center;
       font-weight: 500;
       font-size: clamp(1rem, 1vw, 21px);
@@ -434,7 +483,7 @@ a {
       width: 25px;
       height: 25px;
       border-radius: 50%;
-      background-color: #e9c2c5;
+      background-color: lime;
 }
 
 .right-div-2 {
@@ -444,6 +493,7 @@ a {
       align-items: center;
       text-align: center;
       font-weight: 500;
+      color: lime;
       font-size: clamp(1rem, 1vw, 21px);
       line-height: 29px;
       right: 130px;
@@ -459,6 +509,7 @@ a {
       font-weight: 500;
       font-size: clamp(1rem, 1vw, 21px);
       line-height: 29px;
+      color: lime;
       right: 40px;
       top: 320px;
 }
@@ -467,10 +518,13 @@ a {
       width: 25px;
       height: 25px;
       border-radius: 50%;
-      background-color: #e9c2c5;
+      background-color: lime;
 }
 
 /* logoped */
+#logoped{
+      background-color: lime;
+}
 .logoped {
       padding: 80px 0 0 0;
       background: url('../images/bg-main.png');
@@ -479,13 +533,16 @@ a {
 }
 
 .logoped__title {
-      color: #c27466;
+      color: lime;
       font-size: 60px;
       font-weight: 700;
       font-family: sans-serif;
       margin-bottom: 40px;
       line-height: normal;
       text-align: center;
+}
+.games__desc{
+      color: lime;
 }
 
 .logoped__desc {
@@ -495,7 +552,7 @@ a {
       margin: 0 auto;
       margin-bottom: 140px;
       text-align: center;
-      color: #ef664d;
+      color: lime;
 }
 
 .logoped__gallery {
@@ -543,16 +600,18 @@ a {
       font-family: sans-serif;
       font-size: 53px;
       margin-bottom: 25px;
-      color: #ef664d99;
+      color: lime;
 }
-.bogcha-content .left span{
-      color: #d8482f;
+
+.bogcha-content .left span {
+      color: lime;
 }
+
 .bogcha-content .left p {
       line-height: 27px;
       font-family: sans-serif;
       font-size: 18px;
-      color: tomato;
+      color: lime;
 }
 
 .bogcha-content2 {
@@ -561,20 +620,20 @@ a {
 
 /* Section Testimonials */
 .testimonials {
-      background-color: rgba(255, 160, 122, 0.346);
+      background: url(../images/bg-main.png);
       padding: 120px 0;
 }
 
 .testimonials__title {
       font-size: 60px;
       font-weight: 600;
-      color: #ef664d;
+      color: lime;
       margin-bottom: 15px;
 }
 
 .testimonials__desc {
       font-size: 16px;
-      color: #d8482f;
+      color: lime;
       margin-bottom: 50px;
       max-width: 700px;
 }
@@ -586,7 +645,8 @@ a {
 
 .card1 {
       max-width: 400px;
-      background-color: white;
+      background-color: transparent;
+      color: lime;
       padding: 15px 20px;
       border-radius: 12px;
       margin-bottom: 15px;
@@ -606,13 +666,16 @@ a {
       line-height: 1.4;
       margin-bottom: 17px;
       font-weight: 700;
-      color: #4b4b4b;
+      color: lime;
+}
+.text p{
+      color: lime;
 }
 
 .card2 img {
       height: 80px;
       border-radius: 50%;
-      border: 5px solid #c2bebe;
+      border: 5px solid lime;
 
 }
 
@@ -640,12 +703,12 @@ a {
 
 .article {
       padding: 80px 0;
-      background-color: #c2747689;
+      
 }
 
 
 .article__content h1 {
-      color: #ef664d;
+      color: lime;
       font-size: 60px;
       text-align: center;
       margin-bottom: 25px;
@@ -655,7 +718,7 @@ a {
       font-size: 22px;
       line-height: 26px;
       text-align: center;
-      color: #d8482f;
+      color: lime;
 }
 
 .article__images {
@@ -672,7 +735,7 @@ a {
 }
 
 /* Section Psixolog */
-.psixolog {
+our-team .psixolog {
       background-color: rgb(241, 241, 241);
       padding: 90px 0;
 }
@@ -693,7 +756,7 @@ a {
 .psixolog__desc {
       line-height: 24px;
       color: #8fd82f;
-      -webkit-text-stroke: #d8482f .6px;
+      -webkit-text-stroke: lime .6px;
 }
 
 .psixolog__images {
@@ -728,14 +791,14 @@ a {
 .documents__h2 {
       font-size: 50px;
       text-align: center;
-      color: #c2746699;
+      color: lime;
 }
 
 .documents__desc {
       font-size: 22px;
       margin: 50px 0;
       line-height: 26px;
-      color: #d8482f90;
+      color: lime;
 }
 
 .documents__img3 {
@@ -763,33 +826,36 @@ a {
 .our-team__content .line {
       height: 5px;
       width: 150px;
-      background-color: red;
+      background-color: lime;
       margin-bottom: 80px;
 }
-
+.lame{
+      color: lime;
+}
 .our-team__card h1 {
       font-size: 20px;
       font-weight: 600;
       font-family: sans-serif;
-      color: #ef664d;
+      color: lime;
 }
 
 .our-team__card p {
       max-width: 350px;
       font-size: 16px;
-      color: #d8482f;
+      color: lime;
       margin-bottom: 20px;
 }
 
-.our-team__card img {
+.our-team__card video {
+      max-width: 400px;
       width: 100%;
       height: 280px;
-      object-fit: cover;
 }
 
 /* Section Contact */
 .contact {
       padding: 80px 0 120px;
+      background: url(../images/bg-main.png);
 }
 
 .contact__info {

@@ -51,10 +51,6 @@ const swiper3 = new Swiper(".swiper3", {
   direction: "horizontal",
   slidesPerView: 1,
   spaceBetween: 30,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
   pagination: {
       el: ".swiper-pagination",
       dynamicBullets: true,
